@@ -22,8 +22,7 @@ resource "okta_app_saml" "CyberArk" {
   subject_name_id_format         = "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
   subject_name_id_template       = "$${user.userName}"
   user_name_template             = "$${source.samAccountName}"
-  user_name_template_push_status = "PUSH"
-  user_name_template_type        = "CUSTOM"
+  user_name_template_type        = "BUILT_IN"
 }
 
 # Create CyberArk Group
