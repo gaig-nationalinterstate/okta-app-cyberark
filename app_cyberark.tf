@@ -1,9 +1,9 @@
 resource "okta_app_saml" "CyberArk" {
   assertion_signed               = "false"
-  audience                       = "https://${var.url}/PasswordVault/api/auth/saml/logon"
+  audience                       = "PasswordVault"
   authn_context_class_ref        = "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport"
   auto_submit_toolbar            = "false"
-  default_relay_state            = "https://${var.url}/PasswordVault/api/auth/saml/logon"
+  default_relay_state            = ""
   destination                    = "https://${var.url}/PasswordVault/api/auth/saml/logon"
   digest_algorithm               = "SHA256"
   hide_ios                       = "true"
