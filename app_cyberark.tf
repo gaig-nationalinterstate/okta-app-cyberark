@@ -33,8 +33,8 @@ resource "okta_group" "CyberArk_Users" {
 
 # Group Assignment - Assign CyberArk_Users group to CyberArk App
 resource "okta_app_group_assignment" "CyberArk" {
-  app_id   = "okta_app_saml.CyberArk.id"
-  group_id = "okta_group.CyberArk_Users.id"
+  app_id   = okta_app_saml.CyberArk.id
+  group_id = okta_group.CyberArk_Users.id
 }
 
 # Group Rule
