@@ -39,7 +39,7 @@ resource "okta_app_group_assignment" "CyberArk" {
 
 # Group Rule
 resource "okta_group_rule" "CyberArk_Rule" {
-  expression_value  = "isMemberOfGroupNameContains(\"epv.nic.acct_\")"
+  expression_value  = "isMemberOfGroupNameContains(\"epv.nic.\")"
   group_assignments = [okta_group.CyberArk_Users.id]
   name              = "Add users to CyberArk group"
   status            = "ACTIVE"
